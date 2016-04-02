@@ -62,7 +62,8 @@ class UsersController < ApplicationController
   end
 
   # GET /users/signin
-  def sign
+  def signin
+    
   end
   
   def usignin
@@ -77,7 +78,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :roll_no)
+      params.require(:user).permit(:name, :email, :password)
     end
     
 

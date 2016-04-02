@@ -7,7 +7,6 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Roll Number</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -17,7 +16,6 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.roll_no %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,4 +27,4 @@
 <br>
 
 <%= link_to 'Sign Up', new_user_path %>
-<%= link_to 'Sign In', user_signin_path %>
+<%= link_to 'Sign In', login_path %>

@@ -14,6 +14,7 @@ Feature: loging in to Bearcat food search
 Scenario: Login
   Given a valid user
   When I go to the login page
+  
   And I fill in the following:
     |Email|minikermit@hotmail.com|
     |Password|12345678|

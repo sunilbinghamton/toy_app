@@ -32,7 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -45,3 +45,15 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'sinatra'  
+  gem 'cucumber'  
+  gem 'cucumber-sinatra'  
+  gem 'rspec'  
+  gem 'rack'  
+end
+
+gem 'cucumber-rails', '~> 1.4.2', :require => false

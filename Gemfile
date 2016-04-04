@@ -54,6 +54,7 @@ group :test do
   gem 'cucumber-sinatra'  
   gem 'rspec'  
   gem 'rack'  
+  gem 'bcrypt'
 end
 
 gem 'cucumber-rails', '~> 1.4.2', :require => false

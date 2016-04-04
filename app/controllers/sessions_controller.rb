@@ -6,13 +6,17 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      # Log the user in and redirect to the user's show page.
+      p "User login successful"
+      redirect_to root_url, :notice => "Login Successful"
+      #flash[:success] = 'Login Successful'
     else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      p "User login failure"
+      redirect_to login_path, :notice => "Oops!! Invalid Username/Password. Please try again"
     end
-  end
+  end  
 
   def destroy
+    log_out
+    redirect_to root_url
   end
 end

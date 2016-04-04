@@ -17,7 +17,10 @@ module NavigationHelpers
       users_path      
       
     when /^the Sign Up\s?page$/
-      new_user_path            
+      new_user_path           
+
+    when /^the Login\s?page$/
+      login_path        
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

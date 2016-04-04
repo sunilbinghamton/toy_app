@@ -35,3 +35,31 @@ end
 When(/^I click on the "([^"]*)" button to sign up$/) do |button|
   click_button(button)
 end
+
+When(/^I click on the "([^"]*)" button to Login/) do |button|
+  click_button(button)
+end
+
+Given(/^I am in the Signup page$/) do
+ visit('/users/new')
+end
+
+Then(/^I should see the "([^"]*)" page$/) do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end
+
+Then(/^I should see the "([^"]*)" message$/) do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end
+
+Then(/^I should see the "([^"]*)" flash message$/) do |flash_msg|
+  page.should have_css('.flashnotice', text: flash_msg)
+end

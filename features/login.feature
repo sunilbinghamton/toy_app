@@ -19,21 +19,22 @@ Scenario: Go to Login page
 Scenario: Login with valid credentials
    When I am on the Login page
    And  I fill in "Email" with "matt@binghamton.edu"
-   And  I fill in "Password" with "matty"
+   And  I fill in "Password" with "mattyu89"
    When I click on the "Submit" button to Login
-   Then I should see the "User Login successful" message
+   Then I should see the "Login Successful" message
 
-Scenario: Login with invalid format
-   When I am on the Login page
-   And  I fill in "Email" with "matt.sifj"
-   And  I fill in "Password" with "owj"
-   When I click on the "Submit" button to Login
-   Then I should see the "include an '@'" flash message
-
-   
 Scenario: Login with invalid credentials
    When I am on the Login page
-   And  I fill in "Email" with "ssahu1@binghamton.edu"
-   And  I fill in "Password" with "123456"
+   And  I fill in "Email" with "ssah@bon.edu"
+   And  I fill in "Password" with "126"
    When I click on the "Submit" button to Login
-   Then I should see the "Invalid credentials. Try again" message   
+   Then I should see the "Invalid Username/Password" message   
+
+#Scenario: Login with invalid format
+#   When I am on the Login page
+#   And  I fill in "Email" with "matt.sifj"
+#   And  I fill in "Password" with "owj"
+#   When I click on the "Submit" button to Login
+#   Then I should see the "include an '@'" flash message   
+#
+  

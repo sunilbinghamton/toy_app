@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to users_path, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -61,14 +61,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/signin
-  def signin
-    
-  end
-  
-  def usignin
-    
-  end  
 
   private
     # Use callbacks to share common setup or constraints between actions.

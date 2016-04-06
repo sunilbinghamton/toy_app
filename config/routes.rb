@@ -2,14 +2,14 @@ Rails.application.routes.draw do
   root 'users#index'
   get 'sessions/new'
 
-  resources :users
+  #resources :users
   #get 'user/signin' => 'users#signin'
   #post 'user/signin' => 'users#create'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   
-  root :to => "users#index"
+  #root :to => "users#index"
   resources :users
   resources :sessions  
   

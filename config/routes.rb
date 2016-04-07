@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'users#index'
   get 'sessions/new'
 
-  #resources :users
   #get 'user/signin' => 'users#signin'
   #post 'user/signin' => 'users#create'
   get    'login'   => 'sessions#new'
@@ -11,7 +10,7 @@ Rails.application.routes.draw do
   
   #root :to => "users#index"
   resources :users
-  resources :sessions  
+  #resources :sessions  
   
   
   # The priority is based upon order of creation: first created -> highest priority.

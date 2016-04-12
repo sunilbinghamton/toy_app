@@ -6,20 +6,18 @@ Feature: Reviews and ratings to a food outlets
 Background: User must login BearcatsFoodSearch
 
 Given the following food outlets exist:
-  | Food Courts                   | Food Outlets  |    
+  | foodcourts                    | foodoutlets  |    
   | marketplace                   | Mein Bowl     |
   |                               | Tully's       |
 
-And I have selected particular Food Outlet
+And I selected particular Food Outlet
 
 Scenario: Ratings to a food outlets
-  When I select particular Food outlet 
+  When I select Food Outlet 
   And  I press "Rate" button
-  Then I should see the rate page with "ratings and reviews" text field
-  And  I should click on stars to give user ratings
+  Then I should click on "Stars" button to give user ratings
 
 Scenario: Reviews to a food outlets
-  When I select particular Food outlet 
+  When I select Food Outlet 
   And  I press "Rate" button
-  Then I should see the rate page with "ratings and reviews" text field
-  And  I should write "Reviews" text field to give user reviews
+  Then I should write "Reviews" text field to give user reviews

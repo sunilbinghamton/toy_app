@@ -1,0 +1,18 @@
+<%= form_for(@reviews_and_rating) do |f| %>
+  <% if @reviews_and_rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reviews_and_rating.errors.count, "error") %> prohibited this reviews_and_rating from being saved:</h2>
+
+      <ul>
+      <% @reviews_and_rating.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Rate"%>
+    <%= f.submit "Stars"%>
+  </div>
+<% end %>

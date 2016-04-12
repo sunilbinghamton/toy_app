@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews_and_ratings
   root 'users#index'
   get 'sessions/new'
 
